@@ -1,6 +1,6 @@
 import streamlit as st
-# from email_validator import validate_email
-# from email_validator import EmailNotValidError
+from email_validator import validate_email
+from email_validator import EmailNotValidError
 import pandas as pd
 import numpy as np
 
@@ -14,20 +14,20 @@ Email=st.text_input("Enter the email address")
 
 
 if st.button("Submit"):
-#     try:
-#         emailObject=validate_email(Email)
-#         Email=emailObject.email
-#     except EmailNotValidError as errorMsg:
-#         st.write(str(errorMsg))
-#         raise
-    # n = len(sys.argv)
-    # # print("Total arguments passed:", n)
-    # if(n!=5):
-    #     print("Number of arguements is invalid")
-    #     exit(0)
+    try:
+        emailObject=validate_email(Email)
+        Email=emailObject.email
+    except EmailNotValidError as errorMsg:
+        st.write(str(errorMsg))
+        raise
+#     n = len(sys.argv)
+#     # print("Total arguments passed:", n)
+#     if(n!=5):
+#         print("Number of arguements is invalid")
+#         exit(0)
 
-    # Arguments passed
-    # print("\nName of Python script:", sys.argv[0])
+#     Arguments passed
+#     print("\nName of Python script:", sys.argv[0])
     try:
         df=pd.read_csv(uploaded_file)
     except FileNotFoundError:
