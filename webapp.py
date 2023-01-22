@@ -1,6 +1,6 @@
 import streamlit as st
-from email_validator import validate_email
-from email_validator import EmailNotValidError
+# from email_validator import validate_email
+# from email_validator import EmailNotValidError
 import pandas as pd
 import numpy as np
 
