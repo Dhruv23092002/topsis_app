@@ -18,8 +18,8 @@ if st.button("Submit"):
 #         emailObject=validate_email(Email)
 #         Email=emailObject.email
 #     except EmailNotValidError as errorMsg:
-        st.write(str(errorMsg))
-        raise
+#         st.write(str(errorMsg))
+#         raise
     # n = len(sys.argv)
     # # print("Total arguments passed:", n)
     # if(n!=5):
