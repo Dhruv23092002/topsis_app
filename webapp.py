@@ -14,10 +14,10 @@ Email=st.text_input("Enter the email address")
 
 
 if st.button("Submit"):
-    try:
-        emailObject=validate_email(Email)
-        Email=emailObject.email
-    except EmailNotValidError as errorMsg:
+#     try:
+#         emailObject=validate_email(Email)
+#         Email=emailObject.email
+#     except EmailNotValidError as errorMsg:
         st.write(str(errorMsg))
         raise
     # n = len(sys.argv)
